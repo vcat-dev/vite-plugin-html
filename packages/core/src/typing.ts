@@ -53,6 +53,8 @@ export interface UserOptions {
    */
   inject?: InjectOptions
 
+  ignorePaths?: Array<string>
+
   /**
    * output warning log
    * @default false

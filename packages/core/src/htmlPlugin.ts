@@ -68,7 +68,7 @@ export function createPlugin(userOptions: UserOptions = {}): PluginOption {
       }
       const proxy = viteConfig.server?.proxy ?? {}
       const baseUrl = viteConfig.base ?? '/'
-      const keys = Object.keys(proxy)
+      const keys = userOptions.ignorePaths ?? Object.keys(proxy)
 
       let indexPage: any = null
       for (const page of _pages) {
